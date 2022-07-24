@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background: #252839;
+  overflow: hidden;
+  height: 150px;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+header li{
+  margin: 0 10px;
+  
+}
+
+ul li a{
+  letter-spacing: 1px;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--clr);
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 8px solid var(--clr);
+  -webkit-text-stroke: 1px var(--clr);
+}
+ul li a:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 25px var(--clr))
+}
